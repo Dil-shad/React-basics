@@ -1,0 +1,17 @@
+.header{
+    color: rgb(0, 0, 0) !important;
+    background-color: aqua;
+
+}
+
+.div-header{
+    height: 200px;
+    background-color: royalblue ;
+
+}
+
+.para{
+    
+    color: greenyellow;
+    font-size: 20px;
+}
