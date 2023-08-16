@@ -1,23 +1,51 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const name = "jay";
+  var a = 15;
+  var b = 20;
+  console.log(a);
+  const massage = () => {
+    return "good morning";
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello world</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <table>
+        <Row />
+        <Column />
+      </table>
+    </>
   );
 }
 
+function Row(params) {
+  return (
+    <>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+    </>
+  );
+}
+function Column(params) {
+  return (
+    <>
+      <tr>
+        <td>Dilshad</td>
+        <td>Puthen</td>
+      </tr>
+    </>
+  );
+}
 export default App;
+
+{
+  /* <div className="App">
+<h1 className="heading">Hello world</h1>
+<h1> MY name is {name} </h1>
+<h3>{10 + 20}</h3>
+<h2>{a + b}</h2>
+<h5>{massage}</h5>
+</div> */
+}
