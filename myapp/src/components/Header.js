@@ -1,46 +1,38 @@
 import React, { useState } from "react";
 import { Button, Container } from "react-bootstrap";
+import headerCss from "./Header.module.css";
 
 const Header = () => {
-  const [selectedOption, setSelectedOption] = useState("option2");
 
-  const clickHandle = () => {
-    console.log("you clicked");
-  };
+  useState()
+  const [color, setColor] = useState("Green");
+  const [count, setCount] = useState(0);
+  
+  const increment=() => {
+    setCount(count+1)
+  }
 
-  const dbClickHandle = (arg) => {
-    alert("Hello " + arg);
-  };
-
-  const onChangeHandle = (e) => {
-    alert("You changed value: " + e.target.value);
-  };
-  const mouseHoverHandle = (e) => {
-    alert("Mouse Over " )
-  };
-  const onKeyDown = (e) => {
-    alert("You pressed " + e.key);
+  const decrement=() => {
+    setCount(count-1)
+  }
+  const changeColor = () => {
+    //setColor("Red");
+    setColor(color === "Green"? "Red" : "Green");
   }
   return (
     <>
       <Container fluid >
-        <Button className="mt-5" variant="primary" onClick={clickHandle}>
-          Click Me
-        </Button>
-        <h1 onDoubleClick={() => dbClickHandle("Dilshad")}>Double clicked</h1>
-        <select className=" " style={{width:'180px'}} onChange={onChangeHandle} >
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2 (Selected)</option>
-          <option value="option3">Option 3</option>
-        </select><br />
-        <input className="mt-2" type="text"  onChange={onChangeHandle} placeholder="OnchangeHandler"/><br />
-         {/* <h1 onMouseOver={mouseHoverHandle}>Mouse Hover Test</h1> */}
-         <input type="text" onKeyDown={onKeyDown} placeholder="Test keys"/>
+        <h1 className={headerCss.header}>useState Hook</h1>
+        <h2>My favorite color is {color}</h2>
+        <Button onClick={changeColor}>Change Colour</Button>
+        
+        <br />
+        <h1>Counter is {count}</h1>
+        <button onClick={increment} className="btn m-2 bg-success">+</button>
+        <button onClick={decrement} className="btn m-2 bg-danger">-</button>
 
 
-
-
-      </Container>
+      </Container> 
     </>
   );
 };
