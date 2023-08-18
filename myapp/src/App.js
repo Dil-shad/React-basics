@@ -6,17 +6,31 @@ import States from "./components/States.js";
 import { Container } from "react-bootstrap";
 
 function App() {
-  const states = [
-    { name: "Kerala", language: "Malayalam", population: 1000 },
-    { name: "Tamilnadu", language: "Tamil", population: 2000 },
-    { name: "Andra", language: "Telugu", population: 3000 },
-    { name: "Delhi", language: "Hindi", population: 5000 },
-  ];
+  let number = 1 ;
+  //   const CheckNumber=({number}) => {
+  //     if(number>0){
+  //       return <h1>Positive Number</h1>
+  //     }
+  //     else if(number<0){
+  //       return <h1>Negative Number</h1>
+  //   }
+  //   else{
+  //     return <h1>Zero</h1>
+  //   }
+  // }
 
   return (
     <div className="App">
       <Container>
-        <States States={states} />
+        <h1>Conditional-Rendering</h1>
+        {/* <CheckNumber number={-1}/> */}
+        {number > 0 ? (
+          <h1>Positiv</h1>
+        ) : number < 0 ? (
+          <h1>Negative</h1>
+        ) : (
+          <h1>Zero</h1>
+        )}
       </Container>
     </div>
   );
