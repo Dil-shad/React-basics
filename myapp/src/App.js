@@ -1,14 +1,14 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Keys from "./components/Keys/Keys";
 import { Container } from "react-bootstrap";
+import Products from "./components/Products/Products";
 
 function App() {
   const isLoggedIn = true; // Used
   return (
     <Container>
       <div className="App">
-        <Keys />
+        <Products />
       </div>
     </Container>
   );
