@@ -17,6 +17,7 @@ const Effects = () => {
       <Button variant="primary" onClick={() => setcount(counter + 1)}>
         <strong>+</strong>
       </Button>
+      {console.log(counter)}
     </div>
   );
 };
